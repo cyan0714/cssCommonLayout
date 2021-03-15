@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.左边浮动，右边自适应
+        .left {
+            width: 200px;
+            background-color: cyan;
+            float: left;
+            height: 300px;
+        }
+
+        .right {
+            height: 300px;
+            background-color: pink;
+            margin-left: 200px;
+        } */
+
+        /* 2.左边给宽高，右边绝对定位
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .left {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .right {
+            position: absolute;
+            height: 200px;
+            top: 0;
+            left: 200px;
+            right: 0;
+            background-color: pink;
+        } */
+
+
+        /* 3.利用flex */
+        .box {
+            display: flex;
+            height: 300px;
+            background-color: red;
+        }
+
+        .left {
+            width: 200px;
+            background-color: pink;
+        }
+
+        .right {
+            flex: 1;
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+
+</body>
+
+</html>

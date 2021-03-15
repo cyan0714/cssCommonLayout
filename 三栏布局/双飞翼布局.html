@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header,
+        .footer {
+            height: 100px;
+            background: #ccc;
+        }
+        
+        .container {
+            overflow: hidden;
+        }
+        
+        .center,
+        .left,
+        .right {
+            float: left;
+            height: 300px;
+        }
+        
+        .center {
+            width: 100%;
+            background-color: red;
+        }
+        
+        .left {
+            /* display: none; */
+            width: 200px;
+            background-color: green;
+            margin-left: -100%;
+        }
+        
+        .right {
+            width: 300px;
+            background-color: blue;
+            margin-left: -300px;
+        }
+        
+        .center_content {
+            margin: 0 300px 0 200px;
+            background-color: yellow;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">header</div>
+    <div class="container">
+        <div class="center">
+            <div class="center_content">center_content</div>
+        </div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>
