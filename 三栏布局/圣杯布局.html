@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header,
+      .footer {
+        height: 100px;
+        background-color: #ccc;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .header,
-    .footer {
-      height: 100px;
-      background-color: #ccc;
-    }
+      .container {
+        overflow: hidden;
+        padding: 0 300px 0 200px;
+        background-color: pink;
+      }
 
-    .container {
-      overflow: hidden;
-      padding: 0 300px 0 200px;
-      background-color: pink;
-    }
+      .center,
+      .left,
+      .right {
+        height: 200px;
+        float: left;
+      }
 
-    .center,
-    .left,
-    .right {
-      height: 200px;
-      float: left;
-    }
+      .center {
+        width: 100%;
+        background-color: red;
+      }
 
-    .center {
-      width: 100%;
-      background-color: red;
-    }
+      .left {
+        position: relative;
+        width: 200px;
+        margin-left: -100%;
+        left: -200px;
+        background-color: green;
+      }
 
-    .left {
-      /* display: none; */
-      width: 200px;
-      background-color: green;
-      margin-left: -100%;
-      position: relative;
-      left: -200px;
-    }
+      .right {
+        position: relative;
+        width: 300px;
+        margin-left: -300px;
+        right: -300px;
+        background-color: blue;
+      }
+    </style>
+  </head>
 
-    .right {
-      width: 300px;
-      background-color: blue;
-      margin-left: -300px;
-      position: relative;
-      right: -300px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="header">header</div>
-  <div class="container">
-    <div class="center">center</div>
-    <div class="left">left</div>
-    <div class="right">right</div>
-  </div>
-  <div class="footer">footer</div>
-</body>
-
+  <body>
+    <div class="header">header</div>
+    <div class="container">
+      <div class="center">center</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+  </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .father {
+        border: 2px solid pink;
+        /* 2.在父盒子中加入 overflow: hidden; */
+        overflow: hidden;
+      }
+
+      /* 3.伪元素法 */
+      /* .father::after {
+        content: '';
+        height: 0;
+        visibility: hidden;
+        display: block;
+        clear: both;
+      } */
+
+      .son {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background-color: cyan;
+      }
+
+      /* 1.隔空标签法  */
+      /* .tag {
+      clear: both;
+    } */
+    </style>
+  </head>
+
+  <body>
+    <div class="father">
+      <div class="son"></div>
+      <!-- 1.隔空标签法 -->
+      <!-- <div class="tag"></div> -->
+    </div>
+  </body>
+</html>

@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1.已知宽高情况下 */
+      /* .son {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      } */
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    /* div {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 200px;
-            height: 200px;
-            transform: translate(-50%, -50%);
-            background-color: pink;
-        } */
+      /* 这里是相对页面定位,不是相对 father, 因为 father 没给定位 */
+      /* .son {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        background-color: cyan;
+      } */
 
-    div {
-      width: 200px;
-      height: 200px;
-      background-color: skyblue;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-  </style>
-</head>
+      /* 2.未知宽高(已知宽高的情况下也能用) */
+      /* .son {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: pink;
+      } */
 
-<body>
+      /* 3.使用 flex 布局(父盒子高度已知) */
+      /* width 默认为 100% */
+      .father {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: pink;
+      }
 
-  <div>这个盒子水平垂直居中</div>
+      .son {
+        background-color: cyan;
+      }
+    </style>
+  </head>
 
-
-</body>
-
+  <body>
+    <div class="father">
+      <div class="son">这个盒子水平垂直居中</div>
+    </div>
+  </body>
 </html>
